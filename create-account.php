@@ -15,7 +15,8 @@
 		echo json_encode($errArray);
 	} else {
 		$fp = fopen('users.json', 'w');
-		$newusr = array('username'=> $user, 'password'=> $pass);
+		$favArray = array();
+		$newusr = array('username'=> $user, 'password'=> $pass, 'favorites' => $favArray);
 
 		$usersMap[$user] = $newusr;
 		$fileArray["users"] = $usersMap;

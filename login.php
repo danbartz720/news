@@ -13,7 +13,8 @@ $fileContents = file_get_contents("users.json");
 
 			$successArray = array('successText' => "Login successful.",
 						      	  'successCode' => 1,
-						      	  'username' => $user);
+						      	  'username' => $user,
+						      	  'favorites' => $usersMap[$user]["favorites"]);
 			echo json_encode($successArray);
 		} else {
 			$errArray = array('errText' => "Incorrect username and password combination.",
